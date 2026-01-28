@@ -146,8 +146,8 @@ function App() {
         setMessage("Product updated successfully");
       } else {
         await api.post("/products/", {
-          ...form,
-          id: Number(form.id),
+          name: form.name,
+          description: form.description,
           price: Number(form.price),
           quantity: Number(form.quantity),
         });
